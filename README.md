@@ -23,5 +23,16 @@ python -m http.server 8080
 
 ## Download as PDF
 
-Click the **Download PDF** button in the top-right corner (or just press Ctrl/Cmd+P).
-The print stylesheet hides the toolbar and footer, expands URLs next to links and lays the page out for a clean A4 PDF.
+Use the focus switcher to view the overall CV or a targeted **Tech Lead**,
+**Staff Engineer**, or **AI Architect** version. The selected role is kept in
+the URL (`?role=...`) and in local storage so a recruiter can receive a direct
+link to the relevant version.
+
+The **Download CV** button opens the pre-rendered role PDF from `pdf/` when it
+is available. If the file is not available yet (including local `file://`
+usage), it falls back to `window.print()`.
+
+The print stylesheet uses a single ATS-friendly column, system fonts, canonical
+section headings, and role-aware filtering. GitHub Actions renders the three
+targeted PDFs with Puppeteer on pushes to `main` and commits them back to the
+site. The overall view remains available through browser printing.

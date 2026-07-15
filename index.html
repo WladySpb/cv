@@ -3,23 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vladimir Golubev — Backend Tech Lead & Software Architect</title>
-  <meta name="description" content="Backend Tech Lead & Software Architect — 13+ yrs high-load / high-throughput systems (7,000 req/sec, a stats core live 10+ yrs). System Design, Distributed Systems, Microservices, ClickHouse, AWS, AI-augmented development. Remote-first, Novi Sad, Serbia." />
+  <title>Vladimir Golubev — Backend Tech Lead &amp; Software Architect</title>
+  <meta id="meta-description" name="description" content="Backend Tech Lead &amp; Software Architect — 13+ yrs high-load / high-throughput systems (7,000 req/sec, a stats core live 10+ yrs). System Design, Distributed Systems, Microservices, ClickHouse, AWS, AI-augmented development. Remote-first, Novi Sad, Serbia." />
   <meta name="author" content="Vladimir Golubev" />
   <meta name="keywords" content="Backend Tech Lead, Software Architect, Solutions Architect, Staff Engineer, Principal Engineer, Backend Lead, Engineering Lead, PHP, AWS, Microservices, Distributed Systems, ClickHouse, High-load, Payment Gateway Integration, AI-augmented development, Agentic AI, LLM tooling, Remote" />
+  <link rel="canonical" href="https://cv.wladyspb.pro/" />
+  <meta id="og-title" property="og:title" content="Vladimir Golubev — Backend Tech Lead &amp; Software Architect" />
+  <meta id="og-description" property="og:description" content="Backend Tech Lead &amp; Software Architect — high-load backends, system design, technical leadership and AI-augmented development." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://cv.wladyspb.pro/" />
+  <meta name="twitter:card" content="summary" />
+  <meta id="twitter-title" name="twitter:title" content="Vladimir Golubev — Backend Tech Lead &amp; Software Architect" />
+  <meta id="twitter-description" name="twitter:description" content="Backend Tech Lead &amp; Software Architect — high-load backends, system design, technical leadership and AI-augmented development." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23c8553d'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='56' font-family='Inter, sans-serif' font-weight='700' fill='%23fff5e1'%3EVG%3C/text%3E%3C/svg%3E" />
+  <script src="assets/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vladimir Golubev",
+    "url": "https://cv.wladyspb.pro/",
+    "email": "mailto:wladyspb85@gmail.com",
+    "jobTitle": "Backend Tech Lead & Software Architect",
+    "sameAs": [
+      "https://github.com/WladySpb",
+      "https://www.linkedin.com/in/vladimir-golubev-944060182/",
+      "https://t.me/WladySpb"
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <nav class="toolbar no-print" aria-label="Page tools">
+    <div class="role-switcher" role="group" aria-label="Choose CV focus">
+      <button class="role-tab" type="button" data-role="overall" aria-selected="false">Overall experience</button>
+      <button class="role-tab" type="button" data-role="techlead" aria-selected="false">Tech Lead</button>
+      <button class="role-tab" type="button" data-role="staff" aria-selected="false">Staff Engineer</button>
+      <button class="role-tab" type="button" data-role="ai" aria-selected="false">AI Architect</button>
+    </div>
+    <label class="role-select-wrap">
+      <span class="sr-only">CV focus</span>
+      <select id="role-select" aria-label="Choose CV focus">
+        <option value="overall">Overall experience</option>
+        <option value="techlead">Tech Lead</option>
+        <option value="staff">Staff Engineer</option>
+        <option value="ai">AI Architect</option>
+      </select>
+    </label>
     <button id="theme-toggle" type="button" aria-label="Toggle theme">
       <span class="theme-icon" aria-hidden="true">◐</span>
     </button>
-    <button id="print-btn" type="button" aria-label="Download as PDF">
+    <button id="print-btn" type="button" data-cv-download aria-label="Download as PDF">
       Download CV
     </button>
   </nav>
@@ -30,21 +69,21 @@
     <header class="hero">
       <p class="status">
         <span class="dot" aria-hidden="true"></span>
-        Open to work · Remote-first · Novi Sad, Serbia
+        Open to work | Remote-first | Novi Sad, Serbia
       </p>
-      <h1 class="hero-name">Vladimir<br />Golubev.</h1>
-      <p class="hero-subtitle">Backend Tech Lead &amp; Software Architect</p>
+      <h1 class="hero-name"><span>Vladimir</span> <span>Golubev</span></h1>
+      <p class="hero-subtitle" id="hero-subtitle">Backend Tech Lead &amp; Software Architect</p>
       <p class="hero-tagline">
         Backend engineer &rarr; tech lead.<br />
-        I&rsquo;m the one fuzzy specs go to die.
+        I'm the one fuzzy specs go to die.
       </p>
-      <p class="hero-headline">
-        13+ yrs high-load / high-throughput systems · 7,000 req/sec ·
-        stats core live 10+ yrs · System Design · Distributed Systems ·
-        Microservices · ClickHouse · AWS · AI-augmented development
+      <p class="hero-headline" id="hero-headline">
+        13+ yrs high-load / high-throughput systems | 7,000 req/sec |
+        stats core live 10+ yrs | System Design | Distributed Systems |
+        Microservices | ClickHouse | AWS | AI-augmented development
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#" id="print-btn-2">Download CV (PDF)</a>
+        <a class="btn btn-primary" href="#" id="print-btn-2" data-cv-download>Download CV (PDF)</a>
         <a class="btn btn-ghost" href="mailto:wladyspb85@gmail.com">wladyspb85@gmail.com</a>
       </div>
       <ul class="hero-links">
@@ -54,19 +93,20 @@
         <li><a href="https://info.wladyspb.pro" target="_blank" rel="noopener">info.wladyspb.pro</a></li>
         <li><a href="https://nomorecare.gg" target="_blank" rel="noopener">nomorecare.gg</a></li>
       </ul>
+      <p class="print-contact">wladyspb85@gmail.com | t.me/WladySpb | Novi Sad, Serbia | cv.wladyspb.pro</p>
     </header>
 
     <!-- OPEN TO -->
-    <aside class="open-to" aria-label="Roles open to">
+    <aside class="open-to no-print" aria-label="Roles open to">
       <span class="open-to-label">Open to</span>
-      <span class="open-to-roles">
-        Tech Lead · Backend Tech Lead · Software Architect · Solutions Architect ·
-        Staff Engineer · Principal Engineer · Backend Lead · Engineering Lead
+      <span class="open-to-roles" id="open-to-roles">
+        Tech Lead / Backend Tech Lead / Software Architect / Solutions Architect /
+        Staff Engineer / Principal Engineer / Backend Lead / Engineering Lead
       </span>
     </aside>
 
     <!-- STATS -->
-    <section class="stats" aria-label="Headline stats">
+    <section class="stats no-print" aria-label="Headline stats">
       <div class="stat">
         <strong>13<sup>+</sup></strong>
         <span>years shipping<br />production backends</span>
@@ -86,9 +126,9 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="block about-block">
+    <section class="block about-block" data-section="summary">
       <header class="block-head">
-        <h2>About</h2>
+        <h2><span class="screen-label">About</span><span class="print-label">Summary</span></h2>
         <span class="block-meta">the long version</span>
       </header>
 
@@ -96,13 +136,13 @@
         Backend engineer turned technical lead &mdash; 13+ years building,
         scaling and owning production systems, with team-leadership and
         lead/architect responsibilities since 2018. I design <em>high-load
-        distributed backends</em> and I&rsquo;m accountable for the
+        distributed backends</em> and I'm accountable for the
         architectural decisions behind them.
       </p>
 
-      <p>
+      <p data-roles="overall techlead staff">
         Plain version of what I do: requirements analysis and system design
-        (I&rsquo;d rather pick a fuzzy spec apart for an hour than ship a bug
+        (I'd rather pick a fuzzy spec apart for an hour than ship a bug
         for a month), architecture trade-off decisions (monolith vs.
         microservices, relational SQL vs. column-store &mdash; I choose by
         load, not by trend), and the documentation, code review and testing
@@ -111,73 +151,95 @@
 
       <h3 class="proof-head">Proof points</h3>
       <ul class="proof-list">
-        <li>Designed and scaled a multi-tenant <strong>CPA (cost-per-action / affiliate marketing) platform</strong> whose API peaked at <strong>7,000 requests per second</strong>.</li>
-        <li>A real-time <strong>statistics / analytics core</strong> I architected in 2016 is still running in production a decade later.</li>
-        <li>Integrated <strong>four payment gateways end-to-end</strong> (payment processing / billing integration).</li>
-        <li>Early adopter of <strong>ClickHouse</strong> for analytics; drove team-wide adoption of Vue.js and Docker.</li>
-        <li>Led a backend team from 2018 &mdash; code review, mentoring, architectural sign-off, automated-testing rollout.</li>
+        <li data-roles="overall techlead staff">Designed and scaled a multi-tenant <strong>CPA (cost-per-action / affiliate marketing) platform</strong> whose API peaked at <strong>7,000 requests per second</strong>.</li>
+        <li data-roles="overall techlead staff ai">A real-time <strong>statistics / analytics core</strong> I architected in 2016 is still running in production a decade later.</li>
+        <li data-roles="overall staff">Integrated <strong>four payment gateways end-to-end</strong> (payment processing / billing integration).</li>
+        <li data-roles="overall techlead staff">Early adopter of <strong>ClickHouse</strong> for analytics; drove team-wide adoption of Vue.js and Docker.</li>
+        <li data-roles="overall techlead">Led a backend team from 2018 &mdash; code review, mentoring, architectural sign-off, automated-testing rollout.</li>
       </ul>
 
-      <p>
+      <p data-roles="overall techlead staff">
         <strong>AI-augmented development as a default, not a novelty.</strong>
         I use Claude / Claude Code, ChatGPT, GitHub Copilot, Cursor and Codex
         daily, and I own the agentic harness end-to-end. I stress-test
-        agentic AI / LLM-assisted workflows in my solo indie game studio
+        AI-assisted workflows in my solo indie game studio
         (<a href="https://nomorecare.gg" target="_blank" rel="noopener">nomorecare.gg</a>),
-        where I am sole architect, engineer and operator for three games in
-        development.
+        where I am sole architect, engineer and operator.
       </p>
 
-      <p class="core-stack-blurb">
+      <p data-roles="ai">
+        <strong>AI architecture with production engineering underneath.</strong>
+        I design agentic pipelines, own the harness around them, evaluate model
+        behaviour, and turn AI-assisted workflows into repeatable engineering
+        processes. My focus includes tool use, LLM fine-tuning, local models and
+        human approval at the points where correctness matters.
+      </p>
+
+      <p data-roles="ai">
+        I validate these patterns in my solo studio at
+        <a href="https://nomorecare.gg" target="_blank" rel="noopener">nomorecare.gg</a>:
+        a web-novel design pipeline and a game-master pipeline, with the first
+        version built on an agent framework. Engineering judgement remains the
+        foundation: agents draft, systems validate, and the owner approves.
+      </p>
+
+      <p class="core-stack-blurb" data-roles="overall techlead staff">
         <strong>Core stack:</strong> PHP (5&ndash;8), system design,
         microservices, distributed systems, AWS, ClickHouse, Terraform,
         Docker, Redis; relational and NoSQL databases (MySQL, MariaDB,
         PostgreSQL, ClickHouse, MongoDB, Couchbase, DynamoDB, OpenSearch).
       </p>
 
-      <p>
+      <p data-roles="overall techlead staff">
         Open to <em>Tech Lead, Software Architect and Staff Engineer</em>
         roles where trade-offs and decisions matter more than volume of code.
+        Remote-first, based in Novi Sad, Serbia. English C1, Russian native.
+      </p>
+      <p data-roles="ai">
+        Open to <em>AI Architect and AI-Augmented Engineer</em> roles where
+        agentic systems, model workflows and sound backend architecture meet.
         Remote-first, based in Novi Sad, Serbia. English C1, Russian native.
       </p>
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="block">
+    <section class="block" data-section="experience">
       <header class="block-head">
-        <h2>Experience</h2>
+        <h2><span class="screen-label">Experience</span><span class="print-label">Work Experience</span></h2>
         <span class="block-meta">2013 &rarr; now</span>
       </header>
 
       <ol class="exp-list">
-
         <li class="exp">
           <div class="exp-when">
-            <span class="exp-period">2022 &mdash; Present</span>
+            <span class="exp-period">Jul 2022 – Jun 2026</span>
             <span class="exp-place">Remote</span>
           </div>
           <div class="exp-body">
-            <h3 class="exp-role">Senior Backend Engineer / Tech Lead <span class="at">at</span> <span class="company">Quintegro</span></h3>
+            <h3 class="exp-role">
+              <span class="screen-exp-role">Senior Backend Engineer / Tech Lead <span class="at">at</span> <span class="company">Quintegro</span></span>
+              <span class="print-exp-role">Senior Backend Engineer / Tech Lead — Quintegro · Jul 2022 – Jun 2026 · Remote</span>
+            </h3>
             <p>
               Technical lead and senior backend engineer across a
-              collectible-car ecosystem &mdash; multiple products: event-car
+              collectible-car ecosystem — multiple products: event-car
               rentals, US auction sites, an analytics platform, an RV
               marketplace.
             </p>
             <ul class="exp-bullets">
-              <li>
+              <li data-roles="overall techlead staff ai">
                 Served as <strong>tech lead</strong> on an event-car rental
                 marketplace through its support phase; designed the
                 seller-side deal-offer flow on an in-house PHP framework
                 (PHP, jQuery, MariaDB).
               </li>
-              <li>
+              <li data-roles="overall staff">
                 Built the backend for a data-heavy collectible-car analytics
                 dashboard: subscription-based price-alert emails, currency
                 converter, aggregated historical data blocks by car
                 generation and model, and an authenticating request proxy.
               </li>
-              <li>
+              <li data-roles="overall techlead staff">
                 On a recreational-vehicle (RV) marketplace built on
                 <strong>microservices</strong>: delivered automatic
                 spam/abuse blocking, asynchronous image optimisation, CRUD
@@ -187,28 +249,40 @@
                 rewrote the in-house DynamoDB library from raw arrays into a
                 query-builder API; owned <strong>release management</strong>.
               </li>
+              <li data-roles="ai">
+                Applied an <strong>Agents Framework</strong>, <strong>Claude Code</strong>
+                and <strong>AI process automation</strong> to the working
+                workflow: agents prepare drafts and implementation context,
+                while the owner reviews and approves the result.
+              </li>
             </ul>
-            <p class="chips">
+            <p class="chips" data-roles="overall techlead staff">
               <span>Technical Leadership</span><span>System Design</span><span>Microservices</span><span>Distributed Systems</span><span>PHP</span><span>MariaDB</span><span>AWS</span><span>DynamoDB</span><span>OpenSearch</span><span>CloudWatch</span><span>Terraform</span><span>Release Management</span>
+            </p>
+            <p class="chips" data-roles="ai">
+              <span>Agents Framework</span><span>Claude Code</span><span>AI process automation</span>
             </p>
           </div>
         </li>
 
         <li class="exp">
           <div class="exp-when">
-            <span class="exp-period">2021 &mdash; 2022</span>
+            <span class="exp-period">Jul 2021 – Jun 2022</span>
             <span class="exp-place">St. Petersburg</span>
           </div>
           <div class="exp-body">
-            <h3 class="exp-role">Senior Backend Developer <span class="at">at</span> <span class="company">Playkot</span></h3>
-            <p>
+            <h3 class="exp-role">
+              <span class="screen-exp-role">Senior Backend Developer <span class="at">at</span> <span class="company">Playkot</span></span>
+              <span class="print-exp-role">Senior Backend Developer — Playkot · Jul 2021 – Jun 2022 · St. Petersburg</span>
+            </h3>
+            <p data-roles="overall techlead staff ai">
               Backend engineer on a live mobile-game backend under production
               traffic: implemented <strong>multi-provider authentication with
               account linking</strong>, and optimised <strong>partial-load /
               lazy-loading patterns over MongoDB</strong> for hot player data
               (performance optimisation under load).
             </p>
-            <p class="chips">
+            <p class="chips" data-roles="overall staff">
               <span>PHP</span><span>MongoDB</span><span>NoSQL</span><span>Authentication</span><span>Game Backend</span><span>Performance Optimization</span>
             </p>
           </div>
@@ -216,20 +290,23 @@
 
         <li class="exp">
           <div class="exp-when">
-            <span class="exp-period">2020 &mdash; 2021</span>
+            <span class="exp-period">Oct 2020 – Jun 2021</span>
             <span class="exp-place">St. Petersburg</span>
           </div>
           <div class="exp-body">
-            <h3 class="exp-role">Senior Backend Developer <span class="at">at</span> <span class="company">Rabota.ru</span></h3>
-            <p>
-              Backend engineer on one of Russia&rsquo;s largest job boards
+            <h3 class="exp-role">
+              <span class="screen-exp-role">Senior Backend Developer <span class="at">at</span> <span class="company">Rabota.ru</span></span>
+              <span class="print-exp-role">Senior Backend Developer — Rabota.ru · Oct 2020 – Jun 2021 · St. Petersburg</span>
+            </h3>
+            <p data-roles="overall techlead staff ai">
+              Backend engineer on one of Russia's largest job boards
               (high-traffic web platform): built the <strong>in-account
               customer notification service</strong>, migrated client-account
               features off a legacy codebase onto the new internal framework
               (<strong>legacy modernisation</strong>), and extended
               automated-test coverage across PostgreSQL-backed services.
             </p>
-            <p class="chips">
+            <p class="chips" data-roles="overall staff">
               <span>PHP</span><span>PostgreSQL</span><span>Notifications</span><span>Legacy Migration / Modernization</span><span>Test Automation</span>
             </p>
           </div>
@@ -237,41 +314,43 @@
 
         <li class="exp exp-highlight">
           <div class="exp-when">
-            <span class="exp-period">2015 &mdash; 2020</span>
+            <span class="exp-period">Apr 2015 – Oct 2020</span>
             <span class="exp-place">St. Petersburg · 5y 7m</span>
           </div>
           <div class="exp-body">
-            <h3 class="exp-role">Lead Backend (PHP) Developer <span class="at">at</span> <span class="company">Smart Line</span></h3>
+            <h3 class="exp-role">
+              <span class="screen-exp-role">Lead Backend (PHP) Developer <span class="at">at</span> <span class="company">Smart Line</span></span>
+              <span class="print-exp-role">Lead Backend (PHP) Developer — Smart Line · Apr 2015 – Oct 2020 · St. Petersburg</span>
+            </h3>
             <p class="exp-callout">
-              Grew a small internal PHP utility into <em>offergate.pro</em> &mdash;
+              Grew a small internal PHP utility into <em>offergate.pro</em> —
               a multi-tenant <strong>CPA (cost-per-action / affiliate
               marketing) platform</strong> with two product surfaces and a
               ClickHouse analytics stack.
             </p>
             <ul class="exp-bullets">
-              <li>
+              <li data-roles="overall techlead staff ai">
                 Designed a real-time <strong>statistics / analytics core</strong>
                 in 2016 that still runs in production today; the platform API
                 peaked at <strong>7,000 requests per second</strong>
                 (high-load system design).
               </li>
-              <li>
+              <li data-roles="overall techlead staff">
                 Led a small backend team from 2018: code review, mentoring,
                 architectural sign-off, and a team-wide rollout of
                 automated testing.
               </li>
-              <li>
+              <li data-roles="overall staff">
                 Early ClickHouse adopter for analytics; initiated the
-                team&rsquo;s migration to Vue.js and containerisation with
-                Docker.
+                team's migration to Vue.js and containerisation with Docker.
               </li>
-              <li>
-                Integrated <strong>four payment gateways end-to-end</strong> &mdash;
+              <li data-roles="overall staff">
+                Integrated <strong>four payment gateways end-to-end</strong> —
                 WebMoney, Platron, ePayments, bank131 (payment processing /
                 billing integration).
               </li>
             </ul>
-            <p class="chips">
+            <p class="chips" data-roles="overall techlead staff">
               <span>Technical Leadership</span><span>Team Leadership</span><span>Mentoring</span><span>System Design</span><span>High-Load Systems</span><span>PHP 7</span><span>Vue.js</span><span>ClickHouse</span><span>MariaDB</span><span>Redis</span><span>Couchbase</span><span>Docker</span><span>Payment Gateway Integration</span>
             </p>
           </div>
@@ -279,29 +358,31 @@
 
         <li class="exp">
           <div class="exp-when">
-            <span class="exp-period">2013 &mdash; 2015</span>
+            <span class="exp-period">Jan 2013 – Mar 2015</span>
             <span class="exp-place">St. Petersburg</span>
           </div>
           <div class="exp-body">
-            <h3 class="exp-role">Full-Stack Engineer <span class="at">at</span> <span class="company">TAXOFT</span></h3>
-            <p>
+            <h3 class="exp-role">
+              <span class="screen-exp-role">Full-Stack Engineer <span class="at">at</span> <span class="company">TAXOFT</span></span>
+              <span class="print-exp-role">Full-Stack Engineer — TAXOFT · Jan 2013 – Mar 2015 · St. Petersburg</span>
+            </h3>
+            <p data-roles="overall techlead staff ai">
               Designed, built and maintained the full software stack of a
-              taxi-aggregator / ride-hailing service end-to-end &mdash; first
+              taxi-aggregator / ride-hailing service end-to-end — first
               hands-on exposure to production scale and on-call operations.
             </p>
-            <p class="chips">
+            <p class="chips" data-roles="overall staff">
               <span>PHP</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>MySQL</span><span>Full-Stack Development</span>
             </p>
           </div>
         </li>
-
       </ol>
     </section>
 
     <!-- FEATURED PROJECT -->
-    <section class="block">
+    <section class="block" data-section="projects">
       <header class="block-head">
-        <h2>Side studio</h2>
+        <h2><span class="screen-label">Side studio</span><span class="print-label">Projects</span></h2>
         <span class="block-meta">solo, end-to-end</span>
       </header>
 
@@ -317,7 +398,13 @@
           bed for agentic AI / LLM-assisted (&ldquo;AI-in-the-loop&rdquo;)
           development workflows</strong>.
         </p>
-        <div class="games">
+        <p class="project-ai-detail" data-roles="overall ai">
+          AI pet projects include a pipeline for designing web novels and a
+          game-master pipeline for running structured tabletop scenarios; the
+          first game-master version is built on an agent framework and is
+          evaluated as an engineering workflow, not a toy prompt.
+        </p>
+        <div class="games" data-roles="overall ai">
           <div class="game">
             <span class="game-status">Near release</span>
             <h4>Terminal Stake</h4>
@@ -338,83 +425,79 @@
     </section>
 
     <!-- CORE COMPETENCIES -->
-    <section class="block competencies-block">
+    <section class="block competencies-block" data-section="skills">
       <header class="block-head">
-        <h2>Core competencies</h2>
+        <h2><span class="screen-label">Core competencies</span><span class="print-label">Skills</span></h2>
         <span class="block-meta">literal index for search</span>
       </header>
 
       <div class="pinned">
         <span class="pinned-label">Pinned</span>
-        <div class="pinned-chips">
-          <span>System Design</span>
-          <span>Software Architecture</span>
-          <span>Technical Leadership</span>
-        </div>
+        <div class="pinned-chips" id="pinned-chips" aria-live="polite"></div>
       </div>
 
       <div class="stack">
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="roles">
           <h4>Roles / seniority</h4>
           <p class="chips">
             <span>Technical Lead</span><span>Software Architect</span><span>Staff Engineer</span><span>Senior Backend Engineer</span><span>Engineering Team Lead</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="leadership">
           <h4>Leadership</h4>
           <p class="chips">
             <span>Technical leadership</span><span>Team leadership</span><span>Mentoring</span><span>Code review</span><span>Architectural sign-off / decision ownership</span><span>Release management</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="architecture">
           <h4>Architecture &amp; systems</h4>
           <p class="chips">
             <span>System design</span><span>Software architecture</span><span>Distributed systems</span><span>Microservices</span><span>Monolithic architecture</span><span>High-load / high-throughput systems</span><span>Scalability</span><span>Performance optimization</span><span>API design</span><span>REST APIs</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="runtime">
           <h4>Languages &amp; runtime</h4>
           <p class="chips">
-            <span>PHP (5, 7, 8)</span><span>JavaScript</span><span>SQL</span>
+            <span>PHP (5, 7, 8)</span><span>JavaScript</span><span>SQL</span><span>Python (beginner, pipelines)</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="data">
           <h4>Data</h4>
           <p class="chips">
             <span>ClickHouse</span><span>MySQL</span><span>MariaDB</span><span>PostgreSQL</span><span>MongoDB</span><span>Couchbase</span><span>DynamoDB</span><span>OpenSearch</span><span>Redis</span><span>NoSQL</span><span>Relational databases</span><span>Column-store databases</span><span>Database design</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="cloud">
           <h4>Cloud &amp; infra</h4>
           <p class="chips">
             <span>AWS</span><span>Docker</span><span>Terraform</span><span>CloudWatch</span><span>CI/CD</span><span>Linux</span><span>Infrastructure as Code</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="domains" data-roles="overall techlead staff">
           <h4>Domains</h4>
           <p class="chips">
             <span>Payment gateway integration</span><span>Billing / payment processing</span><span>Affiliate / CPA platforms</span><span>Marketplaces</span><span>Analytics / statistics platforms</span><span>Game backends</span><span>Notifications</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="quality">
           <h4>Quality</h4>
           <p class="chips">
             <span>PHPUnit</span><span>Behat / BDD (behavior-driven development)</span><span>Test automation</span><span>Technical documentation</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="ai">
           <h4>AI-augmented development</h4>
           <p class="chips">
-            <span>Claude / Claude Code</span><span>ChatGPT</span><span>GitHub Copilot</span><span>Cursor</span><span>Codex</span><span>Agentic AI</span><span>LLM-assisted development</span><span>Agentic frameworks</span>
+            <span>Claude / Claude Code</span><span>ChatGPT</span><span>GitHub Copilot</span><span>Cursor</span><span>Codex</span><span>Agentic AI</span><span>LLM-assisted development</span><span>Agentic frameworks</span><span>OpenHands SDK</span><span>LLM fine-tuning</span><span>Local LLM setup: OpenHands SDK + LM Studio</span><span>Python pipelines</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="frontend" data-roles="overall techlead staff">
           <h4>Frontend (working level)</h4>
           <p class="chips">
             <span>Vue.js</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
           </p>
         </div>
-        <div class="stack-group">
+        <div class="stack-group" data-skill-group="languages">
           <h4>Languages</h4>
           <p class="chips">
             <span>Russian (native)</span><span>English (C1)</span>
@@ -424,16 +507,16 @@
 
       <div class="skills-all">
         <span class="skills-all-label">All skills</span>
-        <p class="chips chips-dense">
-          <span>Backend Development</span><span>PHP</span><span>Microservices</span><span>Distributed Systems</span><span>Team Leadership</span><span>Mentoring</span><span>High-Load Systems</span><span>Scalability</span><span>Performance Optimization</span><span>API Design</span><span>REST APIs</span><span>ClickHouse</span><span>AWS</span><span>Docker</span><span>Terraform</span><span>Redis</span><span>MariaDB</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Couchbase</span><span>DynamoDB</span><span>OpenSearch</span><span>NoSQL</span><span>Database Design</span><span>Payment Gateway Integration</span><span>Release Management</span><span>Code Review</span><span>CI/CD</span><span>PHPUnit</span><span>BDD / Behat</span><span>Test Automation</span><span>Vue.js</span><span>Linux</span><span>AI-Augmented Development</span><span>Agentic AI</span><span>LLM Tooling</span>
+        <p class="chips chips-dense" id="all-skills-list">
+          <span>Backend Development</span><span>PHP</span><span>Microservices</span><span>Distributed Systems</span><span>Team Leadership</span><span>Mentoring</span><span>High-Load Systems</span><span>Scalability</span><span>Performance Optimization</span><span>API Design</span><span>REST APIs</span><span>ClickHouse</span><span>AWS</span><span>Docker</span><span>Terraform</span><span>Redis</span><span>MariaDB</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Couchbase</span><span>DynamoDB</span><span>OpenSearch</span><span>NoSQL</span><span>Database Design</span><span>Payment Gateway Integration</span><span>Release Management</span><span>Code Review</span><span>CI/CD</span><span>PHPUnit</span><span>BDD / Behat</span><span>Test Automation</span><span>Vue.js</span><span>Linux</span><span>AI-Augmented Development</span><span>Agentic AI</span><span>LLM Tooling</span><span>OpenHands SDK</span><span>LLM fine-tuning</span><span>Local LLM setup</span><span>Python pipelines</span><span>Python (beginner)</span>
         </p>
       </div>
     </section>
 
     <!-- HIRING -->
-    <section class="block hire-block">
+    <section class="block hire-block no-print">
       <header class="block-head">
-        <h2>If you&rsquo;re hiring</h2>
+        <h2>If you're hiring</h2>
       </header>
       <div class="hire-grid">
         <div>
@@ -476,6 +559,5 @@
 
   </main>
 
-  <script src="assets/script.js"></script>
 </body>
 </html>
