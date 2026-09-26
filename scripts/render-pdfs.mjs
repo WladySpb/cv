@@ -5,12 +5,17 @@ import puppeteer from "puppeteer";
 const baseUrl = process.env.CV_BASE_URL || "http://127.0.0.1:4173";
 const outputDir = path.resolve("pdf");
 const renders = [
+  ["overall", "Vladimir_Golubev_Overall.pdf"],
   ["techlead", "Vladimir_Golubev_Tech_Lead.pdf"],
   ["staff", "Vladimir_Golubev_Staff_Engineer.pdf"],
-  ["ai", "Vladimir_Golubev_AI_Architect.pdf"]
+  ["ai", "Vladimir_Golubev_AI_Engineer.pdf"]
 ];
+const staleOutputs = ["Vladimir_Golubev_AI_Architect.pdf"];
 
 await fs.mkdir(outputDir, { recursive: true });
+await Promise.all(
+  staleOutputs.map((filename) => fs.rm(path.join(outputDir, filename), { force: true }))
+);
 
 const browser = await puppeteer.launch({
   headless: "new",
@@ -21,14 +26,22 @@ try {
   for (const [role, filename] of renders) {
     const page = await browser.newPage();
     await page.goto(`${baseUrl}/?role=${role}`, { waitUntil: "networkidle0" });
-    await page.evaluate(() => document.fonts?.ready);
+    await page.waitForFunction(
+      (expectedRole) => document.documentElement.dataset.role === expectedRole,
+      {},
+      role
+    );
+    await page.evaluate(async () => {
+      if (document.fonts?.ready) await document.fonts.ready;
+    });
     await page.emulateMediaType("print");
     await page.pdf({
       path: path.join(outputDir, filename),
       format: "A4",
       printBackground: true,
       preferCSSPageSize: true,
-      tagged: false,
+      tagged: true,
+      outline: true,
       margin: { top: "8mm", right: "10mm", bottom: "8mm", left: "10mm" }
     });
     await page.close();

@@ -24,15 +24,15 @@ python -m http.server 8080
 ## Download as PDF
 
 Use the focus switcher to view the overall CV or a targeted **Tech Lead**,
-**Staff Engineer**, or **AI Architect** version. The selected role is kept in
+**Staff Engineer**, or **AI Engineer** version. The selected role is kept in
 the URL (`?role=...`) and in local storage so a recruiter can receive a direct
 link to the relevant version.
 
-The **Download CV** button opens the pre-rendered role PDF from `pdf/` when it
-is available. If the file is not available yet (including local `file://`
+The **Download CV** button downloads the pre-rendered role PDF from `pdf/` when
+it is available. If the file is not available yet (including local `file://`
 usage), it falls back to `window.print()`.
 
 The print stylesheet uses a single ATS-friendly column, system fonts, canonical
-section headings, and role-aware filtering. GitHub Actions renders the three
-targeted PDFs with Puppeteer on pushes to `main` and commits them back to the
-site. The overall view remains available through browser printing.
+section headings, and role-aware filtering. GitHub Actions renders the overall
+CV plus three targeted PDFs with Puppeteer, validates their text, page count,
+metadata, links and tagged structure, and commits them back to the site.
