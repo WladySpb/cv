@@ -5,6 +5,7 @@
   var THEME_STORAGE_KEY = "cv-theme";
   var root = document.documentElement;
   var roleNames = ["overall", "techlead", "staff", "ai"];
+  var studioSkills = ["Rust", "Python", "C#", "Godot", "AI Pipelines", "OpenHands SDK", "Codex", "SQLite", "Jev", "LM Studio"];
 
   var roles = {
     overall: {
@@ -144,7 +145,9 @@
     var container = document.getElementById("all-skills-list");
     if (!container) return;
     container.textContent = "";
-    config.allSkills.forEach(function (skill) {
+    config.allSkills.concat(studioSkills).filter(function (skill, index, skills) {
+      return skill !== "Python (beginner)" && skills.indexOf(skill) === index;
+    }).forEach(function (skill) {
       var chip = document.createElement("span");
       chip.textContent = skill;
       container.appendChild(chip);

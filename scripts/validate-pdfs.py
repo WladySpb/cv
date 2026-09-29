@@ -14,6 +14,22 @@ COMMON_TEXT = [
     "Work Experience",
     "Skills",
     "Laravel",
+    "AI Architect",
+    "NoMoreCare",
+    "Jun 2026",
+    "Present",
+    "BuildYourSkillTree",
+    "attic.wladyspb.pro",
+    "Rust",
+    "Python",
+    "C#",
+    "Godot",
+    "AI Pipelines",
+    "OpenHands SDK",
+    "Codex",
+    "SQLite",
+    "Jev",
+    "LM Studio",
 ]
 EXPECTED = {
     "Vladimir_Golubev_Overall.pdf": {
@@ -63,8 +79,6 @@ for filename, expected in EXPECTED.items():
     for fragment in COMMON_TEXT + expected["text"]:
         if fragment not in text:
             fail(f"{filename} is missing extracted text: {fragment!r}")
-    if "AI ARCHITECT" in text.upper():
-        fail(f"{filename} still contains the retired AI Architect title")
 
     uris = set()
     for page in reader.pages:
@@ -73,12 +87,11 @@ for filename, expected in EXPECTED.items():
             action = annotation.get("/A") or {}
             if action.get("/URI"):
                 uris.add(str(action["/URI"]))
-    for required_uri in ("https://github.com/WladySpb", "https://bunchill.cc/"):
-        if required_uri == "https://bunchill.cc/" and filename not in {
-            "Vladimir_Golubev_Overall.pdf",
-            "Vladimir_Golubev_AI_Engineer.pdf",
-        }:
-            continue
+    for required_uri in (
+        "https://github.com/WladySpb",
+        "https://bunchill.co/",
+        "https://attic.wladyspb.pro/",
+    ):
         if required_uri not in uris:
             fail(f"{filename} is missing link annotation: {required_uri}")
 
